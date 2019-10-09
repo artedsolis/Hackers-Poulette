@@ -1,0 +1,33 @@
+@font-face {
+  font-family: 'Bellota-Regular';
+  src: url("Bellota-Regular-webfont.eot");
+  src: url("Bellota-Regular-webfont.eot?iefix") format("eot"), url("Bellota-Regular-webfont.woff") format("woff"), url("Bellota-Regular-webfont.ttf") format("truetype"), url("Bellota-Regular-webfont.svg#webfont") format("svg"); }
+header {
+  background-color: #15C5BD;
+  margin-bottom: 3em;
+  margin-bottom: 0em; }
+
+section {
+  background-color: #303030;
+  padding-top: 3em;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  padding-bottom: 1.5em;
+  color: #FFF; }
+
+form {
+  color: #FFF; }
+
+.form-group {
+  margin-bottom: 0.1rem; }
+
+.btn-primary {
+  background-color: #15C5BD;
+  border-color: #15C5BD;
+  margin: 1em; }
+
+.btn-primary:hover {
+  background-color: #01847E;
+  border-color: #01847E; }
+
+/*# sourceMappingURL=style.css.map */

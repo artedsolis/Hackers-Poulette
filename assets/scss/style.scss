@@ -1,18 +1,23 @@
-// régler la font-family bcs it doesnt work
 @font-face {
-  font-family: 'Bellota-Regular';
-  src: url('Bellota-Regular-webfont.eot');
-  src: url('Bellota-Regular-webfont.eot?iefix') format('eot'),
-    url('Bellota-Regular-webfont.woff') format('woff'),
-    url('Bellota-Regular-webfont.ttf') format('truetype'),
-    url('Bellota-Regular-webfont.svg#webfont') format('svg');
+  font-family: "Bellota-Regular-webfont";
+  src: url("/assets/fonts/Bellota-Regular-webfont.eot")format("eot"),
+    url("assets/fonts/Bellota-Regular-webfont.ttf")format("ttf"),
+    url("assets/fonts/Bellota-Regular-webfont.woff")format("woff");
 }
-
 
 $main-color:#15C5BD;
 $secondary-color:#303030;
 $hover-resalt-color:#01847E;
 $main-text-color:#FFF;
+$primary-font:'Bellota-Regular-webfont';
+
+body {
+  font-family: $primary-font;
+}
+
+#middlename {
+  display: none;
+}
 
 header {
   background-color: $main-color;
@@ -28,6 +33,8 @@ section {
   padding-bottom: 1.5em;
   color: $main-text-color;
 }
+
+
 
 form {
   color: $main-text-color;

@@ -1,7 +1,12 @@
 @font-face {
-  font-family: 'Bellota-Regular';
-  src: url("Bellota-Regular-webfont.eot");
-  src: url("Bellota-Regular-webfont.eot?iefix") format("eot"), url("Bellota-Regular-webfont.woff") format("woff"), url("Bellota-Regular-webfont.ttf") format("truetype"), url("Bellota-Regular-webfont.svg#webfont") format("svg"); }
+  font-family: "Bellota-Regular-webfont";
+  src: url("/assets/fonts/Bellota-Regular-webfont.eot") format("eot"), url("assets/fonts/Bellota-Regular-webfont.ttf") format("ttf"), url("assets/fonts/Bellota-Regular-webfont.woff") format("woff"); }
+body {
+  font-family: "Bellota-Regular-webfont"; }
+
+#middlename {
+  display: none; }
+
 header {
   background-color: #15C5BD;
   margin-bottom: 3em;

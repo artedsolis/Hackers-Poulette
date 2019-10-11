@@ -2,7 +2,7 @@
   font-family: "Bellota-Regular-webfont";
   src: url("/assets/fonts/Bellota-Regular-webfont.eot") format("eot"), url("assets/fonts/Bellota-Regular-webfont.ttf") format("ttf"), url("assets/fonts/Bellota-Regular-webfont.woff") format("woff"); }
 body {
-  font-family: "Bellota-Regular-webfont"; }
+  font-family: "Bellota-Regular-webfont", "arial"; }
 
 #middlename {
   display: none; }

@@ -11,7 +11,7 @@ if (isset($_POST['firstname'], $_POST['lastname'], $_POST['email'], $_POST['gend
     // $_POST['message'] est il vide ou trop long ?
     if (filter_var($_POST['email'], FILTER_VALIDATE_EMAIL) !== false && $_POST['question'] != '' && strlen($_POST['question'])) {
         // Envoi de mail
-        $to = 'webmaster@monsite.be'; // le bénéficicaire
+        $to = 'artedssolis@gmail.com'; // le bénéficicaire
         $subject = 'Un visiteur du site monsite.be a laissé un message';
         $message = 'Un visiteur avec l email ' . $_POST['email'] . ' a laissé le message suivant : ' . $_POST['question'];
         
@@ -53,7 +53,11 @@ if (isset($_POST['firstname'], $_POST['lastname'], $_POST['email'], $_POST['gend
     <header>
       <div class="row">
         <img src="assets/img/hackers-poulette-logo_white.png" class="img-fluid" alt="hackers poulette official logo">
-        <p><?php echo $result; ?></p>
+      </div>
+      <div class="row">
+        <div class="col-8">
+          <p><?php echo $result; ?></p>
+        </div>
       </div>
     </header>
 
@@ -68,6 +72,9 @@ if (isset($_POST['firstname'], $_POST['lastname'], $_POST['email'], $_POST['gend
               <input type="text" class="form-control" id="formGroupExampleInput" placeholder="First name" required alt="please, enter first name" name="firstname">
             </div>
           </div>
+          <!-- H o n e y p o t -->
+          <label class="ohnohoney" for="name"></label>
+          <input class="ohnohoney" autocomplete="off" type="text" id="name" name="middlename" placeholder="Your name here">
           <div class="col-6">
             <div class="form-group">
               <label for="last name">Last name</label>
@@ -75,7 +82,6 @@ if (isset($_POST['firstname'], $_POST['lastname'], $_POST['email'], $_POST['gend
             </div>
           </div>
         </div>
-
         <div class="form-group">
           <label for="email address">Email address</label>
           <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Email address" required alt="please, enter email address" name="email">

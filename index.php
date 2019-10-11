@@ -65,34 +65,34 @@ if (isset($_POST['firstname'], $_POST['lastname'], $_POST['email'], $_POST['gend
           <div class="col-6">
             <div class="form-group">
               <label for="first name">First Name</label>
-              <input type="text" class="form-control" id="formGroupExampleInput" placeholder="First name" required alt="enter first name" name="firstname">
+              <input type="text" class="form-control" id="formGroupExampleInput" placeholder="First name" required alt="please, enter first name" name="firstname">
             </div>
           </div>
           <div class="col-6">
             <div class="form-group">
               <label for="last name">Last name</label>
-              <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Last name" required alt="enter last name" name="lastname">
+              <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Last name" required alt="please, enter last name" name="lastname">
             </div>
           </div>
         </div>
 
         <div class="form-group">
           <label for="email address">Email address</label>
-          <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Email address" required alt="enter email address" name="email">
+          <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Email address" required alt="please, enter email address" name="email">
         </div>
 
         <br />
         <p>Gender</p>
         <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="gender" id="inlineRadio1" alt="men" required value="men">
+          <input class="form-check-input" type="radio" name="gender" id="inlineRadio1" alt="you are a men" required value="men">
           <label class="form-check-label" for="inlineRadio1">Men</label>
         </div>
         <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="gender" id="inlineRadio2" alt="women" required value="women">
+          <input class="form-check-input" type="radio" name="gender" id="inlineRadio2" alt="you are a women" required value="women">
           <label class="form-check-label" for="inlineRadio2">Women</label>
         </div>
         <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="gender" id="inlineRadio2" alt="other" required value="other">
+          <input class="form-check-input" type="radio" name="gender" id="inlineRadio2" alt="other selection" required value="other">
           <label class="form-check-label" for="inlineRadio2">Other</label>
         </div>
         <br />
@@ -116,7 +116,7 @@ if (isset($_POST['firstname'], $_POST['lastname'], $_POST['email'], $_POST['gend
 
         <div class="form-group">
           <label for="exampleFormControlSelect1">Subject</label>
-          <select class="form-control" id="exampleFormControlSelect1" required name="choise">
+          <select class="form-control" id="exampleFormControlSelect1" alt="please, select a question" required name="choise">
             <option value="How did you heard about us ?" alt="How did you heard about us">How did you heard about us ?</option>
             <option value="You have a request" alt="You have a suggestion">You have a request</option>
             <option value="You have a question" alt="You have a question">You have a question</option>
@@ -125,10 +125,10 @@ if (isset($_POST['firstname'], $_POST['lastname'], $_POST['email'], $_POST['gend
 
         <div class="form-group">
           <label for="exampleFormControlTextarea1">Write your message</label>
-          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" alt="write your message" name="question" required></textarea>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" alt="please, write your message" name="question" required></textarea>
         </div>
 
-        <button type="submit" class="btn btn-primary" value="send">Submit form</button>
+        <button alt="please, submit your message" type="submit" class="btn btn-primary" value="send">Submit form</button>
 
       </form>
     </section>

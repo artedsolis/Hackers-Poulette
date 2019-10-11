@@ -1,3 +1,38 @@
+<?php
+// A t on reçu des données du formulaire ?
+if (isset($_POST['firstname'], $_POST['lastname'], $_POST['email'], $_POST['gender'], $_POST['country'], $_POST['question'])) {
+  //fonction htmlspecialchars qui va transformer les chevrons des balises HTML
+   htmlspecialchars ($_POST['firstname']);
+   htmlspecialchars ($_POST['lastname']);
+   htmlspecialchars ($_POST['email']);
+   htmlspecialchars ($_POST['question']);
+    // Sont-elles valides ?
+    // $_POST['email'] est il un email ?
+    // $_POST['message'] est il vide ou trop long ?
+    if (filter_var($_POST['email'], FILTER_VALIDATE_EMAIL) !== false && $_POST['question'] != '' && strlen($_POST['question'])) {
+        // Envoi de mail
+        $to = 'webmaster@monsite.be'; // le bénéficicaire
+        $subject = 'Un visiteur du site monsite.be a laissé un message';
+        $message = 'Un visiteur avec l email ' . $_POST['email'] . ' a laissé le message suivant : ' . $_POST['question'];
+        
+        // Le résultat est stocké dans un booléen
+        $isMailSend = @mail($to, $subject, $message);
+        
+        // On affiche le résultat pour l'utilisateur
+        if ($isMailSend) {
+            $result = '<p>Thank you ' . $_POST['firstname'] . ' ' . $_POST['lastname'] . ' We will contact you soon !<p>';
+        } else {
+            $result = 'Aaaargh problème technique, retente ta chance plus tard.';
+        }
+    } else {
+        $result = 'OUUPPS ! Form poorly completed. Try harder, please !!!';
+    }
+} else {
+    $result = '';
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,15 +49,18 @@
 
   <div class="container-fluid">
 
+
+
     <header>
       <div class="row">
         <img src="assets/img/hackers-poulette-logo_white.png" class="img-fluid" alt="hackers poulette official logo">
+        <p class="confirm_text"><?php echo $result; ?></p>
       </div>
     </header>
 
     <section>
       <p>All fields are required</p>
-      <form method="post" action="cible.php" class="needs-validation">
+      <form method="post" action="index.php">
 
         <div class="row">
           <div class="col-6">
@@ -88,7 +126,7 @@
 
         <div class="form-group">
           <label for="exampleFormControlTextarea1">Write your message</label>
-          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" alt="write your message" name="message" required></textarea>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" alt="write your message" name="question" required></textarea>
         </div>
 
         <button type="submit" class="btn btn-primary" value="send">Submit form</button>
@@ -96,9 +134,7 @@
       </form>
     </section>
 
-
   </div>
-
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

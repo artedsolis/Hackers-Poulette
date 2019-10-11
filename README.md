@@ -19,5 +19,6 @@ Languages which were used:
     (some)Javascript
     PHP
 
+ ![Contact Form's sketch](https://github.com/artedsolis/Hackers-Poulette/blob/master/assets/img/sketch.jpg)
 
 

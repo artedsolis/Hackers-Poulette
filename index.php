@@ -69,7 +69,7 @@ if (isset($_POST['firstname'], $_POST['lastname'], $_POST['email'], $_POST['gend
           <div class="col-6">
             <div class="form-group">
               <label for="first name">First Name</label>
-              <input type="text" class="form-control" id="formGroupExampleInput" placeholder="First name" required alt="please, enter first name" name="firstname">
+              <input type="text" class="form-control" id="formGroupExampleInput" placeholder="First name" required title="please, enter first name" name="firstname">
             </div>
           </div>
           <!-- H o n e y p o t -->
@@ -78,60 +78,60 @@ if (isset($_POST['firstname'], $_POST['lastname'], $_POST['email'], $_POST['gend
           <div class="col-6">
             <div class="form-group">
               <label for="last name">Last name</label>
-              <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Last name" required alt="please, enter last name" name="lastname">
+              <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Last name" required title="please, enter last name" name="lastname">
             </div>
           </div>
         </div>
         <div class="form-group">
           <label for="email address">Email address</label>
-          <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Email address" required alt="please, enter email address" name="email">
+          <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Email address" required title="please, enter email address" name="email">
         </div>
 
         <br />
         <p>Gender</p>
         <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="gender" id="inlineRadio1" alt="you are a men" required value="men">
+          <input class="form-check-input" type="radio" name="gender" id="inlineRadio1" title="you are a men" required value="men">
           <label class="form-check-label" for="inlineRadio1">Men</label>
         </div>
         <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="gender" id="inlineRadio2" alt="you are a women" required value="women">
+          <input class="form-check-input" type="radio" name="gender" id="inlineRadio2" title="you are a women" required value="women">
           <label class="form-check-label" for="inlineRadio2">Women</label>
         </div>
         <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="gender" id="inlineRadio2" alt="other selection" required value="other">
+          <input class="form-check-input" type="radio" name="gender" id="inlineRadio2" title="other selection" required value="other">
           <label class="form-check-label" for="inlineRadio2">Other</label>
         </div>
         <br />
         <br />
         <div class="form-group">
           <label for="choose your country">Choose your country</label>
-          <select class="form-control" id="exampleFormControlSelect1" name="country">
-            <option value="Austria" alt="Austria">Austria</option>
-            <option value="Belgium" alt="Belgium">Belgium</option>
-            <option value="Croatia" alt="Croatia">Croatia</option>
-            <option value="Denmark" alt="Denmark">Denmark</option>
-            <option value="Estonia" alt="Estonia">Estonia</option>
-            <option value="France" alt="France">France</option>
-            <option value="Germany" alt="Germany">Germany</option>
-            <option value="Hungary" alt="Hungary">Hungary</option>
-            <option value="Italy" alt="Italy">Italy</option>
-            <option value="Spain" alt="Spain">Spain</option>
-            <option value="United Kingdom" alt="United Kingdom">United Kingdom</option>
+          <select class="form-control" id="exampleFormControlSelect1" title="choose your country" name="country">
+            <option value="Austria" title="Austria">Austria</option>
+            <option value="Belgium" title="Belgium">Belgium</option>
+            <option value="Croatia" title="Croatia">Croatia</option>
+            <option value="Denmark" title="Denmark">Denmark</option>
+            <option value="Estonia" title="Estonia">Estonia</option>
+            <option value="France" title="France">France</option>
+            <option value="Germany" title="Germany">Germany</option>
+            <option value="Hungary" title="Hungary">Hungary</option>
+            <option value="Italy" title="Italy">Italy</option>
+            <option value="Spain" title="Spain">Spain</option>
+            <option value="United Kingdom" title="United Kingdom">United Kingdom</option>
           </select>
         </div>
 
         <div class="form-group">
           <label for="exampleFormControlSelect1">Subject</label>
-          <select class="form-control" id="exampleFormControlSelect1" alt="please, select a question" required name="choise">
-            <option value="How did you heard about us ?" alt="How did you heard about us">How did you heard about us ?</option>
-            <option value="You have a request" alt="You have a suggestion">You have a request</option>
-            <option value="You have a question" alt="You have a question">You have a question</option>
+          <select class="form-control" id="exampleFormControlSelect1" title="please, select a question" required name="choise">
+            <option value="How did you heard about us ?" title="How did you heard about us">How did you heard about us ?</option>
+            <option value="You have a request" title="You have a suggestion">You have a request</option>
+            <option value="You have a question" title="You have a question">You have a question</option>
           </select>
         </div>
 
         <div class="form-group">
           <label for="exampleFormControlTextarea1">Write your message</label>
-          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" alt="please, write your message" name="question" required></textarea>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" title="please, write your message" name="question" required></textarea>
         </div>
 
         <button alt="please, submit your message" type="submit" class="btn btn-primary" value="send">Submit form</button>
